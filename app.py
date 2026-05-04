@@ -18,8 +18,8 @@ with st.expander('How to use this tool'):
     st.markdown('''
 1. Go to your ShiftAdmin generated schedule page in your browser.
 2. Save the page as an HTML file:
-   - **Chrome/Edge**: File → Save Page As → select "Webpage, HTML Only"
-   - **Firefox**: File → Save Page As → select "Web Page, HTML Only"
+   - **Chrome/Edge**: File → Save Page As → select "Webpage, Complete"
+   - **Firefox**: File → Save Page As → select "Web Page, Complete"
 3. Upload the saved `.html` file below.
 4. The extracted schedule will appear as a table. Use the **Download CSV** button to save it.
 ''')
