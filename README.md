@@ -1,2 +1,2 @@
 # ShiftAdmin-Generation-Extractor
-Making ShiftAdmin output prettier
+This app makes it easier to convert ShiftAdmin generation results into a spreadsheet format for manual review and editing
