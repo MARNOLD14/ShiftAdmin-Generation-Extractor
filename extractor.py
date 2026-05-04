@@ -124,7 +124,7 @@ def extract_calendar(soup: BeautifulSoup) -> pd.DataFrame:
     shifts = [entry for result in raw if result is not None for entry in result]
 
     if not shifts:
-        return pd.DataFrame(columns=['shiftDate', 'shiftName', 'userName', 'userId'])
+        return pd.DataFrame(columns=['shiftDate', 'shiftName', 'userName'])
 
     shifts = pd.DataFrame(shifts)
     shifts = shifts[['shiftDate', 'shiftName', 'userName']]
