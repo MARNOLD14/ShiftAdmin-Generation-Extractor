@@ -1,2 +1,2 @@
 # ShiftAdmin-Generation-Extractor
-Making ShiftAdmin output Prettier
+Making ShiftAdmin output prettier
