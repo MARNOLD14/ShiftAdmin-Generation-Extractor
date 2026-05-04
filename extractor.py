@@ -131,16 +131,16 @@ def extract_calendar(soup: BeautifulSoup) -> pd.DataFrame:
 
     # Use pivot_table to handle duplicate (user, date) entries (double shifts)
     shiftsp = (
-        shifts.pivot_table(
-            columns='shiftDate',
-            index=['userName', 'userId'],
-            values='shiftName',
-            aggfunc=lambda x: ' / '.join(x)
-        )
-        .fillna('')
-        .sort_index(axis=1)
-        .sort_index(axis=0)
+    shifts.pivot_table(
+        columns='shiftDate',
+        index=['userName'],
+        values='shiftName',
+        aggfunc=lambda x: ' / '.join(x)
     )
+    .fillna('')
+    .sort_index(axis=1)
+    .sort_index(axis=0)
+)
 
     return shiftsp
 
