@@ -8,7 +8,7 @@ def get_soup(f):
 
 @st.cache_data
 def get_csv_output(df : pd.DataFrame) -> str:
-    return df.to_csv().encode('utf-8-sig')
+    return df.to_csv(index=False).encode('utf-8-sig')
 
 st.set_page_config(page_title='ShiftAdmin Schedule Extractor', layout='wide')
 st.title('ShiftAdmin Schedule Extractor')
