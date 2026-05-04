@@ -127,7 +127,7 @@ def extract_calendar(soup: BeautifulSoup) -> pd.DataFrame:
         return pd.DataFrame(columns=['shiftDate', 'shiftName', 'userName', 'userId'])
 
     shifts = pd.DataFrame(shifts)
-    shifts = shifts[['shiftDate', 'shiftName', 'userName', 'userId']]
+    shifts = shifts[['shiftDate', 'shiftName', 'userName']]
 
     # Use pivot_table to handle duplicate (user, date) entries (double shifts)
     shiftsp = (
