@@ -17,16 +17,19 @@ st.markdown("""
         max-width: 900px;
         margin: auto;
     }
-    [data-testid="stAppViewContainer"]::before {
-        content: "";
-        display: block;
-        height: 8px;
-        background: linear-gradient(90deg, #1a6b8a, #2eafd4);
-    }
     </style>
+    <div style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(90deg, #1a6b8a, #2eafd4, #1a6b8a);
+        z-index: 999999;
+    "></div>
 """, unsafe_allow_html=True)
 st.title('ShiftAdmin Schedule Extractor')
-st.markdown('Convert a ShiftAdmin generated schedule page into a spreadsheet.')
+st.markdown('This app makes it easier to convert ShiftAdmin generation results into a spreadsheet format for manual review and editing.')
 with st.expander('How to use this tool'):
     st.markdown('''
 1. Go to your ShiftAdmin generated schedule page in your browser.
