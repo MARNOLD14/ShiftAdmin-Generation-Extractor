@@ -24,7 +24,7 @@ st.markdown("""
         left: 0;
         width: 100%;
         height: 4px;
-        background: linear-gradient(90deg, #1a6b8a, #2eafd4);
+        background: linear-gradient(90deg, #001242, #007991, #A0DDE6);
         z-index: 999999;
     "></div>
 """, unsafe_allow_html=True)
