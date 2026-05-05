@@ -24,6 +24,9 @@ with st.expander('How to use this tool'):
     st.image('static/HTMLsave-ezgif.com-optimize.gif')
     st.markdown('''
 3. Upload the saved `.html` file below.
+    ''')
+    st.image('static/HTMLupload-ezgif.com-optimize.gif')
+    st.markdown('''
 4. The extracted schedule will appear as a table. Use the **Download CSV** button to save it.
 ''')
 
