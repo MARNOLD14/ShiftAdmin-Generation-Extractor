@@ -20,8 +20,8 @@ st.markdown("""
     [data-testid="stAppViewContainer"]::before {
         content: "";
         display: block;
-        height: 6px;
-        background: linear-gradient(90deg, #1a6b8a, #2eafd4, #1a6b8a);
+        height: 8px;
+        background: linear-gradient(90deg, #1a6b8a, #2eafd4);
     }
     </style>
 """, unsafe_allow_html=True)
