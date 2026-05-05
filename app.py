@@ -20,6 +20,7 @@ with st.expander('How to use this tool'):
 2. Save the page as an HTML file:
    - **Chrome/Edge**: File → Save Page As → select "Webpage, Complete"
    - **Firefox**: File → Save Page As → select "Web Page, Complete"
+   st.image('static/your_gif_name.gif')
 3. Upload the saved `.html` file below.
 4. The extracted schedule will appear as a table. Use the **Download CSV** button to save it.
 ''')
