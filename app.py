@@ -23,7 +23,7 @@ st.markdown("""
         top: 0;
         left: 0;
         width: 100%;
-        height: 3px;
+        height: 2px;
         background: linear-gradient(90deg, #072AC8, #5CC8FF, #FFFAFF);
         z-index: 999999;
     "></div>
