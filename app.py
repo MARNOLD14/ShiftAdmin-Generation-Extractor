@@ -11,9 +11,26 @@ def get_csv_output(df : pd.DataFrame) -> str:
     return df.to_csv(index=False).encode('utf-8-sig')
 
 st.set_page_config(page_title='ShiftAdmin Schedule Extractor', layout='wide')
-st.title('ShiftAdmin Schedule Extractor')
+st.markdown("""
+    <style>
+    .block-container {
+        max-width: 900px;
+        margin: auto;
+    }
+    </style>
+    <div style="
+        background: linear-gradient(90deg, #1a6b8a, #2eafd4, #1a6b8a);
+        padding: 18px;
+        border-radius: 8px;
+        text-align: center;
+        margin-bottom: 1rem;
+    ">
+        <span style="color: white; font-size: 22px; font-weight: bold;">
+            ShiftAdmin Schedule Extractor
+        </span>
+    </div>
+""", unsafe_allow_html=True)
 st.markdown('Convert a ShiftAdmin generated schedule page into a spreadsheet.')
-
 with st.expander('How to use this tool'):
     st.markdown('''
 1. Go to your ShiftAdmin generated schedule page in your browser.
