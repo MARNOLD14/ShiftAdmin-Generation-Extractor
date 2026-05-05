@@ -17,19 +17,15 @@ st.markdown("""
         max-width: 900px;
         margin: auto;
     }
-    </style>
-    <div style="
+    [data-testid="stAppViewContainer"]::before {
+        content: "";
+        display: block;
+        height: 6px;
         background: linear-gradient(90deg, #1a6b8a, #2eafd4, #1a6b8a);
-        padding: 18px;
-        border-radius: 8px;
-        text-align: center;
-        margin-bottom: 1rem;
-    ">
-        <span style="color: white; font-size: 22px; font-weight: bold;">
-            ShiftAdmin Schedule Extractor
-        </span>
-    </div>
+    }
+    </style>
 """, unsafe_allow_html=True)
+st.title('ShiftAdmin Schedule Extractor')
 st.markdown('Convert a ShiftAdmin generated schedule page into a spreadsheet.')
 with st.expander('How to use this tool'):
     st.markdown('''
