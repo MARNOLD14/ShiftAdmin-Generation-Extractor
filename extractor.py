@@ -124,16 +124,14 @@ def extract_calendar(soup: BeautifulSoup) -> pd.DataFrame:
     shifts = [entry for result in raw if result is not None for entry in result]
 
     if not shifts:
-        return pd.DataFrame(columns=['shiftDate', 'shiftName', 'userName'])
+    return pd.DataFrame(columns=['shiftDate', 'shiftName', 'userName', 'userId'])
 
-    shifts = pd.DataFrame(shifts)
-    shifts = shifts[['shiftDate', 'shiftName', 'userName']]
+shifts = shifts[['shiftDate', 'shiftName', 'userName', 'userId']]
 
-    # Use pivot_table to handle duplicate (user, date) entries (double shifts)
-    shiftsp = (
+shiftsp = (
     shifts.pivot_table(
         columns='shiftDate',
-        index=['userName'],
+        index=['userName', 'userId'],
         values='shiftName',
         aggfunc=lambda x: ' / '.join(x)
     )
