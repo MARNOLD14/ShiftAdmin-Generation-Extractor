@@ -124,21 +124,22 @@ def extract_calendar(soup: BeautifulSoup) -> pd.DataFrame:
     shifts = [entry for result in raw if result is not None for entry in result]
 
     if not shifts:
-    return pd.DataFrame(columns=['shiftDate', 'shiftName', 'userName', 'userId'])
+        return pd.DataFrame(columns=['shiftDate', 'shiftName', 'userName', 'userId'])
 
-shifts = shifts[['shiftDate', 'shiftName', 'userName', 'userId']]
+    shifts = pd.DataFrame(shifts)
+    shifts = shifts[['shiftDate', 'shiftName', 'userName', 'userId']]
 
-shiftsp = (
-    shifts.pivot_table(
-        columns='shiftDate',
-        index=['userName', 'userId'],
-        values='shiftName',
-        aggfunc=lambda x: ' / '.join(x)
+    shiftsp = (
+        shifts.pivot_table(
+            columns='shiftDate',
+            index=['userName', 'userId'],
+            values='shiftName',
+            aggfunc=lambda x: ' / '.join(x)
+        )
+        .fillna('')
+        .sort_index(axis=1)
+        .sort_index(axis=0)
     )
-    .fillna('')
-    .sort_index(axis=1)
-    .sort_index(axis=0)
-)
 
     return shiftsp
 
