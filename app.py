@@ -21,7 +21,7 @@ with st.expander('How to use this tool'):
    - **Chrome/Edge**: File → Save Page As → select "Webpage, Complete"
    - **Firefox**: File → Save Page As → select "Web Page, Complete"
    ''')
-   st.image('static/HTMLsave-ezgif.com-optimize.gif')
+    st.image('static/HTMLsave-ezgif.com-optimize.gif')
     st.markdown('''
 3. Upload the saved `.html` file below.
 4. The extracted schedule will appear as a table. Use the **Download CSV** button to save it.
