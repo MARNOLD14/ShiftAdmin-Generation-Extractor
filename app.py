@@ -38,7 +38,7 @@ with st.spinner('Parsing schedule...'):
             st.warning('No shift assignments were found in this file. Make sure you uploaded a ShiftAdmin generated schedule page.')
             st.stop()
 
-        shiftsp = shiftsp.sort_values('userName')
+        shiftsp = shiftsp.sort_values('userId')
 
         st.success(f'Successfully extracted schedule for {len(shiftsp)} providers.')
         st.dataframe(shiftsp, hide_index=True, use_container_width=True)
